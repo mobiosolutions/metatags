@@ -1,8 +1,9 @@
 <?php
 
-namespace mobiosolutions\metatags\Facades;
+namespace mobiosolutions\metatags\Providers;
 
 use Illuminate\Support\ServiceProvider;
+
 class MetatagsProvider extends ServiceProvider {
     /**
      * Bootstrap the application services.
