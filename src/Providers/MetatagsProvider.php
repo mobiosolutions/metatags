@@ -19,7 +19,7 @@ class MetatagsProvider extends ServiceProvider {
      */
     public function register() {
         $this->app->bind('Metatags', function() {
-            return new \mobiosolutions\Metatags\Metatags;
+            return new \mobiosolutions\metatags\Metatags;
         });
     }
 }
