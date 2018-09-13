@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "mobiosolutions\\metatags\\MetatagsProvider"
+                "mobiosolutions\\metatags\\Providers\\MetatagsProvider"
             ]
         }
     }
