@@ -5,6 +5,7 @@ namespace mobiosolutions\metatags;
 /* A Laravel package to fetch website metadata ( Open Graph | Twitter | Facebook | Article ) */
 
 use DOMDocument;
+use DOMXPath;
 
 class Metatags {
 
@@ -19,6 +20,7 @@ class Metatags {
         
         $doc = new DomDocument();
         @$doc->loadHTML($html);
+
         $xpath = new DOMXPath($doc);
     
         $metaQuery = '//*/meta';
