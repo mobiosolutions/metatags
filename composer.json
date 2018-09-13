@@ -1,5 +1,5 @@
 {
-    "name": "mobiosolutions/Metaags",
+    "name": "mobiosolutions/metatags",
     "description": "A Laravel package to fetch website metadata ( Open Graph | Twitter | Facebook | Article ) ect...",
     "type": "library",
     "require": {},
