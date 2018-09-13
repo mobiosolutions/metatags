@@ -1,5 +1,7 @@
 <?php
 
+namespace mobiosolutions\metatags;
+
 /* A Laravel package to fetch website metadata ( Open Graph | Twitter | Facebook | Article ) */
 
 use DOMDocument;

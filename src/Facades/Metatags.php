@@ -1,6 +1,6 @@
 <?php
 
-namespace mobiosolutions\Metatags\Facades;
+namespace mobiosolutions\metatags\Facades;
 
 use Illuminate\Support\Facades\Facade;
 class MetatagsFacade extends Facade {
