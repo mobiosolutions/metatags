@@ -17,12 +17,5 @@
         "psr-4": {
             "mobiosolutions\\metatags\\": "src/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "mobiosolutions\\metatags\\Providers\\MetatagsProvider"
-            ]
-        }
     }
 }
