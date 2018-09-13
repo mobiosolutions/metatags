@@ -17,5 +17,7 @@
         "psr-4": {
             "mobiosolutions\\metatags\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
