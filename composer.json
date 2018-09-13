@@ -15,7 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "mobiosolutions\\Metatags\\": "src/"
+            "mobiosolutions\\metatags\\": "src/"
         }
     }
 }
