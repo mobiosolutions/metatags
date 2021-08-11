@@ -11,11 +11,15 @@
         {
             "name": "Mobio Solutions",
             "email": "contact@mobiosolutions.com"
+        },
+        {
+            "name": "Felipe Mateus",
+            "email": "eu@felipemateus.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "mobiosolutions\\metatags\\": "src/"
+            "Mobiosolutions\\Metatags\\": "src/"
         }
     },
     "minimum-stability": "dev",

@@ -1,6 +1,6 @@
 <?php
 
-namespace mobiosolutions\metatags\Providers;
+namespace Mobiosolutions\Metatags\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,7 @@ class MetatagsProvider extends ServiceProvider {
      */
     public function register() {
         $this->app->bind('Metatags', function() {
-            return new \mobiosolutions\metatags\Metatags;
+            return new \Mobiosolutions\Metatags\Metatags;
         });
     }
 }
