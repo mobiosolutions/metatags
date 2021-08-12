@@ -1,5 +1,18 @@
 {
     "name": "mobiosolutions/metatags",
+    "version":"1.0.0",
+    "homepage":"https://github.com/mobiosolutions/metatags" ,
+   "keywords":[
+       "Metadata",
+       "Crawler",
+       "Url",
+       "Seo",
+       "og",
+       "twiiter",
+       "facebook",
+       "google",
+       "bing"
+     ],
     "description": "A Laravel package to fetch webpage metadata ( Open Graph | Twitter | Facebook | Article ) ect...",
     "type": "library",
     "require": {},
@@ -22,15 +35,15 @@
             "Mobiosolutions\\Metatags\\": "src/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
-                "mobiosolutions\\metatags\\Providers\\MetatagsProvider"
+                "Mobiosolutions\\Metatags\\Providers\\MetatagsProvider"
             ],
             "aliases": {
-                "Metatags": "mobiosolutions\\metatags\\Facades\\MetatagsFacade"
+                "Metatags": "Mobiosolutions\\Metatags\\Facades\\MetatagsFacade"
             }
         }
     }
