@@ -29,13 +29,12 @@ class Metatags
     {
         $html = self::getMetaContents($url);
 
-        $doc = new DomDocument();
+        $doc = new DOMDocument();
         @$doc->loadHTML($html);
 
         $xpath = new DOMXPath($doc);
 
-        if(!$onlyOGMetatags)
-        {
+        if(!$onlyOGMetatags){
             $metaQuery = '//*/meta';
         }else{
             $metaQuery = '//*/meta[starts-with(@property, \'og:\')]';
