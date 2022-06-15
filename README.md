@@ -4,7 +4,8 @@ A Laravel package to fetch all metadata of a webpage.
 ## Installation
 Perform the following operations in order to use this package
 
-Add to your composer.json
+- **Add to your composer.json**
+```
 {
     "repositories": [
         {
@@ -13,10 +14,10 @@ Add to your composer.json
         }
     ],
     "require": {
-        "mobiosolutions/metatags": "dev-bugfix"
+        "mobiosolutions/metatags": "dev-p1"
     }
 }
-
+```
 - **Add Service Provider** 
    Open `config/app.php` and add `Mobiosolutions\Metatags\Providers\MetatagsProvider::class,` to the end of `providers` array:
 
