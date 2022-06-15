@@ -14,7 +14,7 @@ Perform the following operations in order to use this package
         }
     ],
     "require": {
-        "mobiosolutions/metatags": "dev-p1"
+        "mobiosolutions/metatags": "dev-master"
     }
 }
 ```
