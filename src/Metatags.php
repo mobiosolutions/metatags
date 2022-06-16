@@ -1,6 +1,6 @@
 <?php
 
-namespace mobiosolutions\metatags;
+namespace Mobiosolutions\Metatags;
 
 /* A Laravel package to fetch webpage metadata ( Open Graph | Twitter | Facebook | Article ) */
 
@@ -9,7 +9,7 @@ use DOMXPath;
 
 /**
  * Metatag class is to get Metadata from webpage URL
- * 
+ *
  * @category PHP_Class
  * @package  Metatags
  * @author   Nishit Maheta <nishit.maheta@mobiosolutions.com>
@@ -19,43 +19,42 @@ class Metatags
 
     /**
      * Get Meta data from URL
-     * 
-     * @param string  $url 
+     *
+     * @param string  $url
      * @param boolean $onlyOGMetatags get only og metatags
-     * 
-     * @return array 
+     *
+     * @return array
      */
-    function get( $url, $onlyOGMetatags = false )
+   static function get( $url, $onlyOGMetatags = false )
     {
-        $html = $this->getMetaContents($url);
-        
-        $doc = new DomDocument();
+        $html = self::getMetaContents($url);
+
+        $doc = new DOMDocument();
         @$doc->loadHTML($html);
 
         $xpath = new DOMXPath($doc);
 
-        if(!$onlyOGMetatags)
-        {
+        if(!$onlyOGMetatags){
             $metaQuery = '//*/meta';
         }else{
             $metaQuery = '//*/meta[starts-with(@property, \'og:\')]';
         }
-        
+
         $mMetas = $xpath->query($metaQuery);
         $mmetas = array();
-    
+
         foreach ($mMetas as $meta) {
             $key = $meta->getAttribute('name');
-            $value = $meta->getAttribute('value'); 
-    
+            $value = $meta->getAttribute('value');
+
             if( empty($key) ) {
                 $key = $meta->getAttribute('property');
             }
-    
+
             if( empty($key) ) {
                 $key = $meta->getAttribute('itemprop');
             }
-    
+
             if( !empty($key) ) {
                 if(empty($value)) {
                     $value = $meta->getAttribute('content');
@@ -63,18 +62,18 @@ class Metatags
                 $mmetas[$key] = $value;
             }
         }
-    
+
         return $mmetas;
     }
 
-    /** 
+    /**
      *  Get contenet from url using CURL
      *
-     * @param string $url 
-     * 
-     * @return object 
+     * @param string $url
+     *
+     * @return object
      */
-    protected function getMetaContents($url)
+    protected static function getMetaContents($url)
     {
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_FAILONERROR, 1);
