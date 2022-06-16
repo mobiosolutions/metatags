@@ -1,23 +1,7 @@
 ﻿# Metatags
 A Laravel package to fetch all metadata of a webpage.
 
-## Installation
-Perform the following operations in order to use this package
 
-- **Add to your composer.json**
-```
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/tobyberesford/metatags"
-        }
-    ],
-    "require": {
-        "mobiosolutions/metatags": "dev-master"
-    }
-}
-```
 - **Add Service Provider** 
    Open `config/app.php` and add `Mobiosolutions\Metatags\Providers\MetatagsProvider::class,` to the end of `providers` array:
 
